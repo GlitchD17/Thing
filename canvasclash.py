@@ -266,4 +266,4 @@ def generate_image_route():
 if __name__ == '__main__':
     # Use host='0.0.0.0' to make it accessible on your network
     # Debug=True is helpful during development but should be OFF in production
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=False)
