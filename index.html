@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Image Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Basic inline styles if not using style.css */
+        body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+        #image-container { margin: 20px 0; min-height: 300px; max-width: 90%; border: 1px solid #ccc; display: flex; justify-content: center; align-items: center; }
+        #result-image { max-width: 100%; max-height: 600px; display: block; }
+        #generate-button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        #status { margin-top: 15px; font-style: italic; color: #555; }
+        .loading { cursor: wait; } /* Style for button when loading */
+    </style>
+</head>
+<body>
+    <h1>Random Image from Common Crawl</h1>
+
+    <div id="image-container">
+        <img id="result-image" src="" alt="Generated Image Area">
+    </div>
+
+    <button id="generate-button">Generate New Image</button>
+
+    <div id="status">Click the button to generate an image.</div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
